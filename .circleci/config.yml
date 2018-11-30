@@ -40,5 +40,9 @@ jobs:
     # run tests!
     - run: yarn test
 
-    # deploy!
-    - run: yarn deploy
+    - run:
+        name: Deploy to GitHub Pages
+        command: |
+          git config --global user.email $GITHUB_EMAIL
+          git config --global user.name $GITHUB_NAME
+          yarn deploy
