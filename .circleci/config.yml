@@ -16,6 +16,10 @@ jobs:
 
     working_directory: ~/registeracompany.ee
 
+    branches:
+      ignore:
+      - gh-pages
+
     steps:
     - checkout
 
